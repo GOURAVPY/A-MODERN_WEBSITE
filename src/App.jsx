@@ -1,4 +1,4 @@
-import { Navbar } from "./camponent/index";
+import { Navbar, Hero , LinkandTrust, Sarvise } from "./camponent/index";
 import { useState } from "react";
 function App() {
   const [theme, setTheme] = useState(
@@ -7,8 +7,11 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className=" dark:bg-black selection:bg-gray-400 dark:selection:bg-[#6f6e78]">
         <Navbar theme={theme} setTheme={setTheme} />
+        <Hero />
+        <LinkandTrust />
+        <Sarvise />
       </div>
     </>
   );
