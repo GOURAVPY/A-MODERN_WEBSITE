@@ -1,4 +1,4 @@
-import { Navbar, Hero , LinkandTrust, Sarvise } from "./camponent/index";
+import { Navbar, Hero, LinkandTrust, Sarvise, OurWork, Teams, ContactUs } from "./camponent/index";
 import { useState } from "react";
 function App() {
   const [theme, setTheme] = useState(
@@ -12,6 +12,9 @@ function App() {
         <Hero />
         <LinkandTrust />
         <Sarvise />
+        <OurWork />
+        <Teams />
+        <ContactUs />
       </div>
     </>
   );

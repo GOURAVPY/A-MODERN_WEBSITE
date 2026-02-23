@@ -1,5 +1,5 @@
-import React from "react";
-import assets from "../assets/assets"
+import assets from "../assets/assets";
+import ServiseCard from "./ServiseCard";
 import Title from "./Title";
 
 const Sarvise = () => {
@@ -29,12 +29,25 @@ const Sarvise = () => {
     },
   ];
 
-  return <div id="services" className="relative flex flex-col items-center gap7 px-4 sm:px-12 lg:24 xl:px-40 pt-30 text-gray-700 dark:text-white">
-    <img src={assets.bgImage2} alt=""  className="absolute -top-110 -left-70 -z-1 dark:hidden"/>
+  return (
+    <div
+      id="services"
+      className="relative flex flex-col items-center gap7 px-4 sm:px-12 lg:24 xl:px-40 pt-30 text-gray-700 dark:text-white"
+    >
+      <img
+        src={assets.bgImage2}
+        alt=""
+        className="absolute -top-110 -left-70 -z-1 dark:hidden"
+      />
 
-    <Title title="How can we help? " desc="from strategy to execution we digital solutions that move your business forword." />
-
-  </div>;
+      <Title title={"How can we help? "}desc={"From strategy to execution we digital solutions that move your business forword."} />
+      <div className="grid md:grid-cols-2">
+        {serciceData.map((Service, id) => (
+          <ServiseCard key={id} Service={Service} index={id} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Sarvise;

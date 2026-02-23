@@ -2,29 +2,22 @@ import { useEffect } from "react";
 import assets from "../assets/assets";
 
 const themeToglebotton = ({ theme, setTheme }) => {
- 
-  useEffect(()=>{
-  
-    const systemThemeChamege = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(theme || (systemThemeChamege ? 'dark' : 'light'))
-  })
+  useEffect(() => {
+    const systemThemeChamege = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    setTheme(theme || (systemThemeChamege ? "dark" : "light"));
+  });
 
-
- 
   useEffect(() => {
     if (theme === "dark") {
-
       document.documentElement.classList.add("dark");
-
     } else {
-
       document.documentElement.classList.remove("dark");
-
     }
     localStorage.setItem("theme", theme);
   }, [theme]);
 
- 
   return (
     <div className=" flex items-center justify-center">
       <button>

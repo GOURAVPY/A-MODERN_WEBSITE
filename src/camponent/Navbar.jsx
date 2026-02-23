@@ -49,7 +49,7 @@ const Navbar = ({ theme, setTheme }) => {
         </a>
         <a
           onClick={() => setSidebarOpne(false)}
-          href="#our-wark"
+          href="#our-work"
           className=" sm:hover:border-b"
         >
           Our Wark

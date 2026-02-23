@@ -1,8 +1,21 @@
-import Navbar from "./Navbar";
-import themeToglebotton from "./themeToglebotton";
 import Hero from "./Hero";
 import LinkandTrust from "./LinkandTrust";
-import Sarvise from "./Sarvise";
+import Navbar from "./Navbar";
 import Title from "./Title";
+import Sarvise from "./Sarvise";
+import themeToglebotton from "./themeToglebotton";
+import OurWork from "./OurWork";
+import Teams from "./Teams";
+import ContactUs from "./ContactUs";
 
-export { Navbar, Title, Sarvise, themeToglebotton, Hero, LinkandTrust };
+export {
+  Navbar,
+  Title,
+  ContactUs,
+  Sarvise,
+  themeToglebotton,
+  Hero,
+  Teams,
+  LinkandTrust,
+  OurWork,
+};
