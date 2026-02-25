@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import assets from "../assets/assets";
 import ThemeToggleButton from "./themeToglebotton";
+import { motion } from "motion/react";
 
 const Navbar = ({ theme, setTheme }) => {
   const [sidebarOpne, setSidebarOpne] = useState(false);
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
       className=" flex justify-between items-center px-4 sm:px-12
      lg:px-24 xl:px-40 py-4 sticky top-0 z-20
       backdrop-blur-xl 
@@ -36,28 +40,28 @@ const Navbar = ({ theme, setTheme }) => {
         <a
           onClick={() => setSidebarOpne(false)}
           href="#"
-          className=" sm:hover:border-b "
+          className="sm:hover:border-b"
         >
           Home
         </a>
         <a
           onClick={() => setSidebarOpne(false)}
           href="#services"
-          className=" sm:hover:border-b"
+          className="sm:hover:border-b"
         >
           Services
         </a>
         <a
           onClick={() => setSidebarOpne(false)}
           href="#our-work"
-          className=" sm:hover:border-b"
+          className="sm:hover:border-b"
         >
           Our Wark
         </a>
         <a
           onClick={() => setSidebarOpne(false)}
-          href="#contact-us "
-          className=" sm:hover:border-b"
+          href="#contact-us"
+          className="sm:hover:border-b"
         >
           Contact Us
         </a>
@@ -79,7 +83,7 @@ const Navbar = ({ theme, setTheme }) => {
           Connect <img src={assets.arrow_icon} width={14} alt="" />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

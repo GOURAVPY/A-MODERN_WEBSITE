@@ -7,6 +7,7 @@ import themeToglebotton from "./themeToglebotton";
 import OurWork from "./OurWork";
 import Teams from "./Teams";
 import ContactUs from "./ContactUs";
+import Footer from './footer'
 
 export {
   Navbar,
@@ -18,4 +19,5 @@ export {
   Teams,
   LinkandTrust,
   OurWork,
+  Footer,
 };
